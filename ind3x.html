@@ -1,59 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Commander Dashboard</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Commander Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-    <body>
-        <!-- <section class="hero">
-        <div class="background-balls">
-        <div class="ball" style="top: 20%; left: 10%;"></div>
-        <div class="ball" style="top: 40%; left: 60%;"></div>
-        <div class="ball" style="top: 70%; left: 30%;"></div>
-        </div>
-        <div class="hero-text">
-        <h1>Commander Dashboard</h1>
-        <p>Crypto warfare starts here. Tactical intel. Live ops. High ground secured.</p>
-        </div>
-        </section> -->
 
-        <div class="hero">
-<!-- Background balls -->
-<div class="ball back" style="top: 21%; left: 18%; width: 100px; height: 100px;"></div>
-<div class="ball back front" style="top: 70%; left: 13%; width: 280px; height: 280px;"></div>
+<body>
+ <header class="mainNav">
+    <nav>
+        <ul class="navlist">
+          <li><div class="logo"><img src="/images/whiteLogo.png" class="logoPic" alt="";></li>
+          <li><a href="ind3x.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><button class="exclusive-btn">Buy Now</li>
+       </ul>
+    </nav>
+ </header>
 
-<!-- Foreground giant morph blob -->
-<div class="blob"></div>
+ <section>
+    <div class="hero">
+    <!-- Background balls -->
+    <div class="ball back" style="top: 21%; left: 18%; width: 100px; height: 100px;"></div>
+    <div class="ball back front" style="top: 70%; left: 13%; width: 280px; height: 280px;"></div>
+    <!-- Foreground giant morph blob -->
+    <div class="blob"></div>
+    <!-- Foreground balls -->
+    <div class="ball front" style="top: 25%; left: 65%; width: 60px; height: 60px;"></div>
+    <div class="ball front" style="top: 55%; left: 60%; width: 90px; height: 90px;"></div>
+    <!-- Text -->
+    <div class="hero-text">
+    <h1>Commander Dashboard</h1>
+    <p>Crypto Tactical View. Ready for Deployment.</p>
+    </div>
+    </div>
+ </section>
 
-<!-- Foreground balls -->
-<div class="ball front" style="top: 25%; left: 65%; width: 60px; height: 60px;"></div>
-<div class="ball front" style="top: 55%; left: 60%; width: 90px; height: 90px;"></div>
+  <section class="content">
+    <h2>Live Analytics</h2>
+    <p>Scroll through the command logs. Real-time crypto data loading...</p>
+  <section class="charts-grid">
+    <div class="chart-box">
+    <h3>BTC Chart</h3>
+    <canvas id="btcChart"></canvas>
+    </div>
+    <div class="chart-box">
+    <h3>BCH Chart</h3>
+    <canvas id="bchChart"></canvas>
+    </div>
+    <div class="chart-box">
+    <h3>TAO Chart</h3>
+    <canvas id="taoChart"></canvas>
+    </div>
+  </section>
 
-<!-- Text -->
-<div class="hero-text">
-<h1>Commander Dashboard</h1>
-<p>Crypto Tactical View. Ready for Deployment.</p>
+<section class="live-price">
+<h3>Live Price Tracker</h3>
+<div class="price-values" id="priceTracker">
+<!-- Populated dynamically -->
+</div>
+</section>
+  </section>
+
+  <section class="footer">
+    <div class="balancing-board">
+    <div class="ball small"></div>
+    <div class="ball medium"></div>
+    <div class="ball large"></div>
+    </div>
+  </section>
+
+  <footer class="commander-footer">
+<div class="footer-overlay">
+<div class="footer-column">
+<h3>Commander HQ</h3>
+<p>Crypto Tactical Ops System</p>
+</div>
+<div class="footer-column">
+<h3>Navigation</h3>
+<ul>
+<li><a href="#">Live Analytics</a></li>
+<li><a href="#">Market Intel</a></li>
+<li><a href="#">System Logs</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Status</h3>
+<p>🟢 Online</p>
+<p id="datetime"></p>
 </div>
 </div>
+</footer>
 
-
-        <div class="blob"></div>
-
-        <section class="content">
-        <h2>Live Analytics</h2>
-        <p>Scroll through the command logs. Real-time crypto data loading...</p>
-        </section>
-
-        <section class="footer">
-        <div class="balancing-board">
-        <div class="ball small"></div>
-        <div class="ball medium"></div>
-        <div class="ball large"></div>
-        </div>
-        </section>
-
-    <!-- <script src="script.js"></script> -->
-    </body>
+    
+ </body>
 </html>
