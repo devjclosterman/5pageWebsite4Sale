@@ -1,0 +1,27 @@
+.status-strip {
+background: #1a1a1a;
+color: #c2aaff;
+padding: 0.5rem 1rem;
+font-family: monospace;
+font-size: 0.9rem;
+text-align: center;
+border-bottom: 1px solid #333;
+}
+
+.news-ticker {
+background: #222;
+color: #fff;
+font-size: 0.9rem;
+padding: 0.3rem 1rem;
+border-bottom: 1px solid #333;
+}
+
+.mini-tickers {
+display: flex;
+justify-content: center;
+background: #1a1a1a;
+color: #c2aaff;
+gap: 2rem;
+padding: 0.5rem 1rem;
+font-size: 0.9rem;
+}
