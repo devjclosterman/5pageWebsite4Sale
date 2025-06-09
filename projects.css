@@ -1,9 +1,4 @@
-body {
-margin: 0;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: #121212;
-color: #f0f0f0;
-}
+
 
 header {
 text-align: center;
@@ -56,6 +51,13 @@ transition: color 0.3s;
 .project-links a:hover {
 color: #ffffff;
 }
+
+.screenshots {
+    height: auto;
+    width: 270px;
+}
+
+
 
 footer {
 text-align: center;

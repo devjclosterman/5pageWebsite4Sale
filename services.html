@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="services.css" />
 </head>
 <body>
    <header class="mainNav">
     <nav>
         <ul class="navlist">
-          <li><div class="logo"><img src="/images/SafeCrypto.png" class="logoPic" alt="";></li>
+          <li><div class="logo"><img src="/images/whiteLogo.png" class="logoPic" alt="";></li>
           <li><a href="ind3x.html">Home</a></li>
           <li><a href="/about.html">About</a></li>
           <li><a href="/contact.html">Contact</a></li>
@@ -20,8 +21,33 @@
        </ul>
     </nav>
  </header>
-  <section class="content">
-   
+ <section class="services-section">
+<h2>Our Capabilities</h2>
+<div class="services-grid">
+<div class="service-card" onclick="toggleService(this)">
+<h3>AI Dashboard Engineering</h3>
+<p class="brief">Custom real-time systems tailored for tactical intelligence.</p>
+<p class="details">We architect HUDs, analytics overlays, and full-stack interfaces to give your data command center status.</p>
+</div>
+<div class="service-card" onclick="toggleService(this)">
+<h3>Web Systems Deployment</h3>
+<p class="brief">Battle-tested frontend/backend builds for high-performance ops.</p>
+<p class="details">React, Node, Mongo, Python — we bring firepower to your frontend and fortify your backends with military precision.</p>
+</div>
+<div class="service-card" onclick="toggleService(this)">
+<h3>Smart Automation</h3>
+<p class="brief">Strategic workflows powered by custom AI automations.</p>
+<p class="details">We weaponize APIs, bots, and schedulers to free you from grunt work and streamline ops.</p>
+</div>
+</div>
+</section>
+
+<section class="footer">
+    <div class="balancing-board">
+    <div class="ball small"></div>
+    <div class="ball medium"></div>
+    <div class="ball large"></div>
+    </div>
   </section>
 
   <footer class="commander-footer">
