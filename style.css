@@ -571,3 +571,64 @@ animation: float 3s ease-in-out infinite;
     background: radial-gradient(circle at 30% 30%, #6b4c3b, #2e1f1a);
     animation: floatBall 12s infinite linear;
 }
+
+
+/* LLM  */
+#forge-chatbox {
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+width: 320px;
+height: 420px;
+background: rgba(0, 0, 0, 0.55);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(0, 255, 255, 0.2);
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+z-index: 9999;
+font-family: 'Segoe UI', sans-serif;
+color: #fff;
+box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+}
+
+.forge-header {
+background: rgba(0, 255, 255, 0.08);
+padding: 0.8rem;
+font-weight: bold;
+text-align: center;
+border-bottom: 1px solid rgba(0,255,255,0.1);
+font-size: 1.1rem;
+}
+
+.forge-messages {
+flex: 1;
+padding: 1rem;
+overflow-y: auto;
+font-size: 0.95rem;
+}
+
+.forge-bot, .forge-user {
+margin-bottom: 1rem;
+line-height: 1.4;
+}
+
+.forge-bot {
+color: #00ffff;
+}
+
+.forge-user {
+color: #aaa;
+text-align: right;
+}
+
+#forge-input {
+border: none;
+outline: none;
+padding: 0.8rem;
+background: rgba(0, 0, 0, 0.6);
+color: #fff;
+border-top: 1px solid rgba(0, 255, 255, 0.2);
+font-size: 0.95rem;
+border-radius: 0 0 20px 20px;
+}

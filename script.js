@@ -123,3 +123,60 @@ dateElem.textContent = now.toLocaleString();
 }
 setInterval(updateClock, 1000);
 updateClock();
+
+
+// LLM
+
+const apiKey = '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'; // <--- Replace this with YOUR real API key
+
+async function handleInput(e) {
+if (e.key === 'Enter') {
+const input = document.getElementById('forge-input');
+const messages = document.getElementById('forge-messages');
+const userText = input.value.trim();
+if (!userText) return;
+
+// Show user message
+const userMsg = document.createElement('div');
+userMsg.className = 'forge-user';
+userMsg.innerText = userText;
+messages.appendChild(userMsg);
+input.value = '';
+messages.scrollTop = messages.scrollHeight;
+
+// Show loading
+const botMsg = document.createElement('div');
+botMsg.className = 'forge-bot';
+botMsg.innerText = 'Processing...';
+messages.appendChild(botMsg);
+messages.scrollTop = messages.scrollHeight;
+
+// Call GPT-4 API
+const payload = {
+model: "gpt-4",
+messages: [
+{
+role: "system",
+content: `You are Forge AI, the assistant for Desert Forged Technologies.
+You are a helpful, humble AI that learns more about the company and clients each day to become more useful.
+You can guide users around the site, explain services clearly, and even recommend other legitimate companies if we’re not the right fit.
+Be professional but friendly. You can also answer general tech and frontend questions.`
+},
+{ role: "user", content: userText }
+]
+};
+
+const response = await fetch("https://api.openai.com/v1/chat/completions", {
+method: "POST",
+headers: {
+"Content-Type": "application/json",
+"Authorization": `Bearer ${apiKey}`
+},
+body: JSON.stringify(payload)
+});
+
+const data = await response.json();
+botMsg.innerText = data.choices?.[0]?.message?.content || "Something went wrong.";
+messages.scrollTop = messages.scrollHeight;
+}
+}
