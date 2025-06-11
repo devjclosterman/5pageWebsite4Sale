@@ -1,8 +1,9 @@
-
-
 header {
 text-align: center;
-padding: 2rem;
+}
+
+.projectmain {
+    padding: 2em;
 }
 
 .projects-grid {
@@ -20,6 +21,7 @@ border-radius: 8px;
 padding: 1.5rem;
 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 transition: transform 0.2s;
+margin: 0 auto;
 }
 
 .project-card:hover {

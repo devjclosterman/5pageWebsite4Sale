@@ -1,22 +1,23 @@
-.bakkground-image {
+.about-wrapper {
   background-image: url("/images/pheonixSvg.png");
-  height: 1000px;
   background-color: #1e1e1e;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: auto; 
-
-  /* height: 500px; */
+  height: 40em;
 }
+
 .glass-panel {
 position: relative;
 overflow: hidden; 
-/* keep the rest of your styles */
 border-radius: 25px;
 backdrop-filter: blur(10px);
-height: 20em;
-/* padding-top: %; */
+height: 11em;
+padding: 1%;
+}
 
+.warning {
+  text-align: center;
 }
 
 .glass-panel::before {
@@ -85,7 +86,6 @@ transform: translate(-50%, -50%) scale(1.8);
 opacity: 0;
 }
 }
-
 
 /* 🪂 Slide-in Quote */
 @keyframes slide-in-right {
