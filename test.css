@@ -25,3 +25,35 @@ gap: 2rem;
 padding: 0.5rem 1rem;
 font-size: 0.9rem;
 }
+
+.footer {
+background: rgba(0, 0, 0, 0.7); /* or a gradient */
+backdrop-filter: blur(10px);
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 -4px 12px rgba(0, 255, 255, 0.05);
+}
+
+/* background-image: repeating-linear-gradient(
+to bottom,
+rgba(255, 255, 255, 0.02),
+rgba(255, 255, 255, 0.02) 1px,
+transparent 1px,
+transparent 4px
+); */
+
+.video-display {
+width: 400px;
+height: 225px;
+border: 2px solid rgba(255, 255, 255, 0.15);
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 0 10px #00ffff20;
+}
+@keyframes orbit {
+0% { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+100% { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+.ball {
+animation: orbit 10s linear infinite;
+}
