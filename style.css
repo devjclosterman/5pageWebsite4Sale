@@ -350,22 +350,24 @@ bottom: 15px;
 
 .wood-footer-text {
 position: absolute;
-bottom: 10px; /* adjust based on where you want it */
+bottom: 10px; 
 width: 100%;
-text-align: center;
-color: #d0c7b5; /* light tan / wood tone */
+/* text-align: center; */
+color: #d0c7b5; 
 font-family: 'Georgia', serif;
 font-size: 0.9rem;
 text-shadow: 1px 1px 2px #00000088;
 pointer-events: none; /* prevents hover issues */
+white-space: nowrap;
+
 }
 
 .wood-footer-text {
-font-family: 'Cinzel', serif; /* optional old-style serif */
-color: #3b2f1b;
+/* color: #3b2f1b; */
 font-size: 1.1rem;
 text-shadow: -1px -1px 0 #00000055, 1px 1px 0 #ffffff11;
 opacity: 0.85;
+background-image: url("/images/burnedwood.jpg");
 }
 
 
@@ -443,58 +445,6 @@ text-shadow: 0 0 4px #b287f0;
 color: #fff;
 }
 
-
-
-
-
-/* ///////testing////////// */
- /* #blob canvas {
-    width: 100%;
-    height: 100vh;
-}
-
-*::before, ::after {
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 0;
-} 
-
-canvas {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-} */
-
-/* .bg-phoenix {
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-z-index: -10;
-opacity: 0.03; 
- pointer-events: none;
-display: flex;
-justify-content: center;
-align-items: center;
-} */
-
-/* .bg-phoenix img {
-max-width: 1000px;
-width: 80%;
-height: auto;
-filter: grayscale(100%) blur(1px);
-}   */
-
- 
-
-
-
-
-
-
-
-
-
 /* ////// start over with damn balls/// */
 
 
@@ -516,14 +466,14 @@ height: 70px;
 .balancing-board .ball {
 background: radial-gradient(circle at 30% 30%, #805f4c, #3c2b22);
 border-radius: 50%;
+
 }
-
-
 
 .balancing-board {
 position: relative;
 height: 100px;
 background: linear-gradient(to top, #3b2c24, #000);
+/* background-image: url("/images/burnedwood.jpg"); */
 border-radius: 20px;
 display: flex;
 justify-content: space-evenly;
@@ -535,6 +485,8 @@ overflow: hidden;
 .balancing-board .ball {
 border-radius: 50%;
 background: radial-gradient(circle at 30% 30%, #deb887, #3b2c24);
+/* background-image: url("/images/burnedwood.jpg"); */
+
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 flex-shrink: 0;
 animation: float 3s ease-in-out infinite;
