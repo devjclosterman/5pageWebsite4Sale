@@ -173,7 +173,7 @@ body: JSON.stringify(payload)
 });
 
 const data = await response.json();
-botMsg.innerText = data.choices?.[0]?.message?.content || "This Feature is COMING SOON!.";
+botMsg.innerText = data.choices?.[0]?.message?.content || "We just got sponsored by META! We are updating our LLM as quick as possible. This Feature is COMING SOON!.";
 messages.scrollTop = messages.scrollHeight;
 }
 }
