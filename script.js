@@ -126,9 +126,6 @@ updateClock();
 
 
 // LLM
-
-const apiKey = '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'; // <--- Replace this with YOUR real API key
-
 async function handleInput(e) {
 if (e.key === 'Enter') {
 const input = document.getElementById('forge-input');
@@ -176,7 +173,7 @@ body: JSON.stringify(payload)
 });
 
 const data = await response.json();
-botMsg.innerText = data.choices?.[0]?.message?.content || "Something went wrong.";
+botMsg.innerText = data.choices?.[0]?.message?.content || "This Feature is COMING SOON!.";
 messages.scrollTop = messages.scrollHeight;
 }
 }
