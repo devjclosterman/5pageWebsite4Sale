@@ -8,7 +8,7 @@ app.use(express.json());
 const PORT = 3000;
 
 // Replace this with your real OpenAI API key
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = 'yourKeyHere';
 
 app.post('/chat', async (req, res) => {
   const userMessage = req.body.message;
