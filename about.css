@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: auto; 
-  height: 40em;
+  height: 30em;
 }
 
 .glass-panel {
@@ -12,12 +12,23 @@ position: relative;
 overflow: hidden; 
 border-radius: 25px;
 backdrop-filter: blur(10px);
-height: 11em;
+height: 18em;
 padding: 1%;
+max-width: 90%;
+margin: 0 auto;
+}
+
+.mission {
+  margin-top: 2%;
 }
 
 .warning {
   text-align: center;
+  padding-top: 2%;
+}
+
+.tagline {
+  margin-top: 1%;
 }
 
 .glass-panel::before {
