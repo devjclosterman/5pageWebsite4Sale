@@ -177,3 +177,46 @@ botMsg.innerText = data.choices?.[0]?.message?.content || "We just got sponsored
 messages.scrollTop = messages.scrollHeight;
 }
 }
+
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+
+for (let i = 0; i < 30; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    len: Math.random() * 80 + 10,
+    speed: Math.random() * 3 + 2,
+    alpha: Math.random() * 0.5 + 0.3
+  });
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let star of stars) {
+    ctx.beginPath();
+    let grad = ctx.createLinearGradient(star.x, star.y, star.x + star.len, star.y + star.len);
+    grad.addColorStop(0, `rgba(0,255,204,${star.alpha})`);
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.strokeStyle = grad;
+    ctx.moveTo(star.x, star.y);
+    ctx.lineTo(star.x + star.len, star.y + star.len);
+    ctx.stroke();
+
+    star.x += star.speed;
+    star.y += star.speed;
+
+    if (star.x > canvas.width || star.y > canvas.height) {
+      star.x = Math.random() * -100;
+      star.y = Math.random() * canvas.height;
+    }
+  }
+  requestAnimationFrame(drawStars);
+}
+
+drawStars();
+
