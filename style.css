@@ -363,7 +363,7 @@ box-shadow: inset -15px -15px 40px rgba(0, 0, 0, 0.2),
 inset 10px 10px 25px rgba(255, 255, 255, 0.15),
 0 20px 40px rgba(0, 0, 0, 0.3);
 animation: morph 8s ease-in-out infinite alternate;
-background-image: url("/images/backgroundAI.png");
+background-image: url("/5pageWebsite4Sale/images/backgroundAI.png");
 }
 
 @keyframes morph {
@@ -414,7 +414,7 @@ text-align: center;
 
 .wood-footer {
 position: relative;
-background: url('/images/burnedwood.jpg') no-repeat center/cover;
+/* background: url('/images/burnedwood.jpg') no-repeat center/cover; */
 height: 120px; /* Adjust to match your image */
 display: flex;
 align-items: center;
