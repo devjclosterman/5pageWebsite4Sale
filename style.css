@@ -449,7 +449,6 @@ white-space: nowrap;
 font-size: 1.1rem;
 text-shadow: -1px -1px 0 #00000055, 1px 1px 0 #ffffff11;
 opacity: 0.85;
-background-image: url("/images/burnedwood.jpg");
 }
 
 
@@ -678,3 +677,23 @@ border-radius: 0 0 20px 20px;
   animation: float 8s ease-in-out infinite;
   position: absolute;
 }
+#stars {
+  position: fixed;            /* Use fixed instead of absolute */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;                /* Behind all content */
+  pointer-events: none;
+}
+
+
+.hero {
+  position: relative; /* So absolute children like #stars position correctly */
+  overflow: hidden;
+}
+.hero, .hero-text, .blob, .ball {
+  /* position: relative; */
+  z-index: 1; /* Make sure it's above the canvas */
+}
+
