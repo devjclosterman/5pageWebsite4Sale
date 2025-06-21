@@ -677,6 +677,7 @@ border-radius: 0 0 20px 20px;
   animation: float 8s ease-in-out infinite;
   position: absolute;
 }
+
 #stars {
   position: fixed;            /* Use fixed instead of absolute */
   top: 0;
@@ -687,11 +688,11 @@ border-radius: 0 0 20px 20px;
   pointer-events: none;
 }
 
-
 .hero {
   position: relative; /* So absolute children like #stars position correctly */
   overflow: hidden;
 }
+
 .hero, .hero-text, .blob, .ball {
   /* position: relative; */
   z-index: 1; /* Make sure it's above the canvas */
